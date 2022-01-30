@@ -1,6 +1,10 @@
-const h1 = document.querySelector(".hello h1");
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
 
-function handleTitleClick(){
-    h1.classList.toggle("clicked");
+function handleLoginClick(){
+    const username = loginInput.value;
+    console.log(username);
 }
-h1.addEventListener("click", handleTitleClick);  //괄호 금지!!
+
+loginButton.addEventListener("click", handleLoginClick);
