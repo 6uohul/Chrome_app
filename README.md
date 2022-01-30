@@ -1,1 +1,1 @@
-# Chrome_app_with_JS
+# 바닐라 JS로 크롬 앱 
