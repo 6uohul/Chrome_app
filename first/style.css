@@ -2,3 +2,30 @@
 .hidden{
     display: none;
 }
+
+body {
+    width: 100%;
+    padding: 0%;
+    margin: auto;
+    font-size: 50px;
+    background-color: black;
+    color: white;
+}
+
+#login-form{
+   width: 300px;
+   font-size: 50px;
+    margin: auto;
+    font-style: italic;
+}
+
+
+#greeting{
+    width: 50%;
+    margin: auto;
+}
+
+#removing{
+    width: 50%;
+    margin: auto;
+}
