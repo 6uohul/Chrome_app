@@ -7,16 +7,19 @@ const link = document.querySelector("a");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
+const localStUsername = localStorage.getItem(USERNAME_KEY);
+
 function onLoginSubmit(event){
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
+    //const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, loginInput.value);
     //greeting.innerText = "Hello " + username;
-    Greetings(username);
+    Greetings();
 }
 
-function Greetings(username){
+function Greetings(){
+    const username = localStorage.getItem(USERNAME_KEY);
     greeting.innerText = `Hello ${username} !`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     removeButton.classList.remove(HIDDEN_CLASSNAME);
@@ -30,12 +33,10 @@ function removingStorage(){
     greeting.classList.add(HIDDEN_CLASSNAME);
 }
 
-const localStUsername = localStorage.getItem(USERNAME_KEY);
-
 if(localStUsername === null){   //user정보가 없을 때
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
 }else{
-    Greetings(localStUsername);
+    Greetings();
     removeButton.addEventListener("click", removingStorage);    
 }
