@@ -1,31 +1,14 @@
 /* 어떤 요소든 classnames를 주면 그 요소를 숨김 */
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 
 body {
-    width: 100%;
-    padding: 0%;
-    margin: auto;
-    font-size: 30px;
-    background-color: black;
-    color: white;
-}
-
-#login-form{
-   width: 100px;
-   font-size: 50px;
-    margin: auto;
-    font-style: italic;
-}
-
-
-#greeting{
-    width: 50%;
-    margin: auto;
-}
-
-#removing{
-    width: 50%;
-    margin: auto;
+  width: 100%;
+  padding: 0%;
+  margin: auto;
+  font-size: 25px;
+  background-color: rgb(80, 80, 150);
+  color: white;
+  font-style: italic;
 }
